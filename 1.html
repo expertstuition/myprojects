@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="txtbox" type="text"/>
+<input id="clickbut" type="button" value="enter" onClick="abc()"/>
+<script>
+function abc(){
+
+var x = document.getElementById("txtbox").innerHTML;
+x = JSON.stringify(x);
+var html5docs = JSON.parse(x);
+    // Store
+    localStorage.setItem("firstname", html5docs);
+    // Retrieve
+    console.log(localStorage.getItem("firstname"));
+}
+</script>
+
+</body>
+</html>
